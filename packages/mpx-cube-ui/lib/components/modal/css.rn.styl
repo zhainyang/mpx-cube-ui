@@ -41,11 +41,13 @@
   top $var(modal-close-icon-top)
   right $var(modal-close-icon-right)
   padding-all($var(modal-close-icon-padding-top), $var(modal-close-icon-padding-right), $var(modal-close-icon-padding-bottom), $var(modal-close-icon-padding-left))
+
+.cube-modal-close-icon
+  width $var(modal-close-icon-width)
+  height $var(modal-close-icon-height)
   font-size $var(modal-close-icon-font-size)
   font-weight $var(modal-close-icon-font-weight)
   color $var(modal-close-icon-color)
-  width $var(modal-close-icon-width)
-  height $var(modal-close-icon-height)
 
 .cube-modal-body
   // 特例：picker、radio-modal、checkbox-modal 需用到，写法上不做合并
@@ -73,3 +75,16 @@
 .cube-modal-footer
   padding-all($var(modal-footer-padding-top), $var(modal-footer-padding-right), $var(modal-footer-padding-bottom), $var(modal-footer-padding-left))
   safe-area-mixin-extra(padding-bottom, bottom, $var(modal-footer-safe-padding), true)
+
+.cube-modal-line
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%), rotate(45deg), scale(0.8)
+  background-color: $var(color-dark-grey)
+.cube-modal-line-horizontal
+  width $var(font-size-lg)
+  height: 2px
+.cube-modal-line-vertical
+  width: 2px
+  height $var(font-size-lg)
